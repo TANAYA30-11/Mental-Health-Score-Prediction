@@ -59,8 +59,9 @@ form.addEventListener("submit", async function (event) {
     try {
 
         // Send request to FastAPI
-        const response = await fetch("/predict", {
-            method: "POST",
+        const API_URL = "https://mental-health-score-prediction-1-emx5.onrender.com";
+
+        const response = await fetch(`${API_URL}/predict`, {
 
             headers: {
                 "Content-Type": "application/json"
